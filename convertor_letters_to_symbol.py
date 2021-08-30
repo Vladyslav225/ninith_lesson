@@ -1,49 +1,7 @@
-# def line(_str, size):
-#      a = _str * size
-#      return a
-
-# def line_sharp( _str, size, isspace=False):
-#      a = ''
-
-#      for _ in range(size):
-#           if not isspace:
-#                a += '*\n'
-
-#           elif isspace:
-#                aa = '**'
-#                for i in range(17):
-#                     aa += '#'
-               
-#                a = aa + '**\n'
-
-# #           elif isspace:
-# #                aa = '##**'
-# #                for i in range(13):
-# #                     aa += '%'
-               
-# #                a = aa + '**##\n'
-
-# #           elif isspace:
-# #                aa = '%%##**'
-# #                for i in range(9):
-# #                     aa += '^'
-               
-# #                a = aa + '**##%%\n'
-
-#      return a
-
-# a = line('*', 21)
-# ab = line_sharp('a', 1, isspace=True)
-# print(a)
-# print(ab.rstrip())
-# print(a)
-
-
-
-
-
 # Converter
-list_line = []
+
+
+list_letters = []
 
 word_list = 'vlad'
 
@@ -74,24 +32,14 @@ def third_line():
      for _ in range(8):
           line_2 += '.'
 
-     return line_2
-     
+     return line_2   
 
 def func_v():
 
-     print()
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
+     for _ in range(6):
+          line = second_line()
+          print(line)
+
      line = first_line()
      print(line)
      print()
@@ -100,67 +48,43 @@ def func_v():
 
 def func_l():
 
-     line = third_line()
-     print(line)
-     line = third_line()
-     print(line)
-     line = third_line()
-     print(line)
-     line = third_line()
-     print(line)
-     line = third_line()
-     print(line)
-     line = third_line()
-     print(line)
+     for _ in range(6):
+          line = third_line()
+          print(line)
+
      line = first_line()
      print(line)
-
-     return line
-
-# print(func_l())
+     print()
 
 def func_a():
 
-     print()
      line = first_line()
      print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
+
+     for _ in range(2):
+          line = second_line()
+          print(line)
+     
      line = first_line()
      print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
+
+     for _ in range(3):
+          line = second_line()
+          print(line)
      print()
-
-
-     # return 'a'
-
-# print(func_a())
 
 def func_d():
 
      print()
      line = first_line()
      print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
-     line = second_line()
-     print(line)
+
+     for _ in range(5):
+          line = second_line()
+          print(line)
+     
      line = first_line()
      print(line)
-
 
 line_dict = {
      'v': func_v(),
