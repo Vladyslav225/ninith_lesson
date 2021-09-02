@@ -30,8 +30,6 @@ def third_type_line():
 
 def func_v():
 
-
-
      line_v_0 = second_type_line()
      line_v_1 = second_type_line()
      line_v_2 = second_type_line()
