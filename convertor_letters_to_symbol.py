@@ -1,6 +1,6 @@
 width_line = 10
 
-list_letters = 'v'
+list_letters = 'vlad'
 
 def first_type_line():
 
@@ -30,57 +30,47 @@ def third_type_line():
 
 def func_v():
 
-     line_v_0 = second_type_line()
-     line_v_1 = second_type_line()
-     line_v_2 = second_type_line()
-     line_v_3 = second_type_line()
-     line_v_4 = second_type_line()
-     line_v_5 = second_type_line()
-     line_v_6 = first_type_line()
+     res = ''
 
-     res = line_v_0 + '\n' + line_v_1 + '\n' + line_v_2 + '\n' + line_v_3 + '\n' + line_v_4 + '\n' + line_v_5 + '\n' + line_v_6
+     for _ in range(6):
+          res += second_type_line() + '\n'
 
+     res += first_type_line()
      return res
 
 def func_l():
 
-     line_v_0 = third_type_line()
-     line_v_1 = third_type_line()
-     line_v_2 = third_type_line()
-     line_v_3 = third_type_line()
-     line_v_4 = third_type_line()
-     line_v_5 = third_type_line()
-     line_v_6 = first_type_line()
+     res = ''
 
-     res = line_v_0 + '\n' + line_v_1 + '\n' + line_v_2 + '\n' + line_v_3 + '\n' + line_v_4 + '\n' + line_v_5 + '\n' + line_v_6
+     for _ in range(6):
+          res += third_type_line() + '\n'
+
+     res += first_type_line()
 
      return res
 
 def func_a():
 
-     line_v_0 = first_type_line()
-     line_v_1 = second_type_line()
-     line_v_2 = second_type_line()
-     line_v_3 = first_type_line()
-     line_v_4 = second_type_line()
-     line_v_5 = second_type_line()
-     line_v_6 = second_type_line()
+     res = first_type_line() + '\n'
 
-     res = line_v_0 + '\n' + line_v_1 + '\n' + line_v_2 + '\n' + line_v_3 + '\n' + line_v_4 + '\n' + line_v_5 + '\n' + line_v_6
+     for _ in range(2):
+          res += second_type_line() + '\n'
+
+     res += first_type_line() + '\n'
+
+     for _ in range(3):
+          res += second_type_line() + '\n'
 
      return res
 
 def func_d():
 
-     line_v_0 = first_type_line()
-     line_v_1 = second_type_line()
-     line_v_2 = second_type_line()
-     line_v_3 = second_type_line()
-     line_v_4 = second_type_line()
-     line_v_5 = second_type_line()
-     line_v_6 = first_type_line()
+     res = first_type_line() + '\n'
 
-     res = line_v_0 + '\n' + line_v_1 + '\n' + line_v_2 + '\n' + line_v_3 + '\n' + line_v_4 + '\n' + line_v_5 + '\n' + line_v_6
+     for _ in range(6):
+          res += second_type_line() + '\n'
+
+     res += first_type_line()
 
      return res
 
