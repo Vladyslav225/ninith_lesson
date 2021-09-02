@@ -96,6 +96,7 @@
 
 width_line = 10
 
+list_letters = 'v'
 
 def first_type_line():
 
@@ -186,10 +187,13 @@ dict_letters = {
      'd': func_d()
      }
 
+for letter in list_letters:
+     dict_letters[letter]
+
 for key in dict_letters:
-     print(dict_letters[key] + '\n')
+     print(dict_letters[key], '\n')
 
 with open('convert.txt', 'w') as convert:
      for key in dict_letters:
-          convert.write(dict_letters[key] + '\n')
+          convert.write(dict_letters[key] + ('\n'))
           convert.close
