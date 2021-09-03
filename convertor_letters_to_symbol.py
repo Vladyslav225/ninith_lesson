@@ -1,6 +1,10 @@
+list_rs =[]
+
+
+
 width_line = 10
 
-list_letters = 'vlad'
+letters = 'vlad'
 
 def first_type_line():
 
@@ -30,49 +34,49 @@ def third_type_line():
 
 def func_v():
 
-     res = ''
+     letter = ''
 
      for _ in range(6):
-          res += second_type_line() + '\n'
+          letter += second_type_line() + '\n'
 
-     res += first_type_line()
-     return res
+     letter += first_type_line()
+     return letter
 
 def func_l():
 
-     res = ''
+     letter = ''
 
      for _ in range(6):
-          res += third_type_line() + '\n'
+          letter += third_type_line() + '\n'
 
-     res += first_type_line()
+     letter += first_type_line()
 
-     return res
+     return letter
 
 def func_a():
 
-     res = first_type_line() + '\n'
+     letter = first_type_line() + '\n'
 
      for _ in range(2):
-          res += second_type_line() + '\n'
+          letter += second_type_line() + '\n'
 
-     res += first_type_line() + '\n'
+     letter += first_type_line() + '\n'
 
      for _ in range(3):
-          res += second_type_line() + '\n'
+          letter += second_type_line() + '\n'
 
-     return res
+     return letter
 
 def func_d():
 
-     res = first_type_line() + '\n'
+     letter = first_type_line() + '\n'
 
-     for _ in range(6):
-          res += second_type_line() + '\n'
+     for _ in range(5):
+          letter += second_type_line() + '\n'
 
-     res += first_type_line()
+     letter += first_type_line()
 
-     return res
+     return letter
 
 dict_letters = {
      'v': func_v(),
@@ -81,13 +85,27 @@ dict_letters = {
      'd': func_d()
      }
 
-for letter in list_letters:
+for letter in letters:
      dict_letters[letter]
 
-for key in dict_letters:
-     print(dict_letters[key], '\n')
+r1 = dict_letters['v']
+r2 = dict_letters['l']
+r3 = dict_letters['a']
+r4 = dict_letters['d']
+
+r_1 = r1.split('\n')
+r_2 = r2.split('\n')
+r_3 = r3.split('\n')
+r_4 = r4.split('\n')
+
+for rr_1, rr_2, rr_3, rr_4 in zip(r_1, r_2, r_3, r_4):
+     rs = rr_1 + '   ' + rr_2 + '   ' + rr_3 + '   ' + rr_4
+     list_rs.append(rs)
+
+for r in list_rs:
+     print(r)
 
 with open('convert.txt', 'w') as convert:
-     for key in dict_letters:
-          convert.write(dict_letters[key] + ('\n'))
+     for r in list_rs:
+          convert.write(r + '\n')
           convert.close
