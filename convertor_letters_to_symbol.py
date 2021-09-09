@@ -1,5 +1,6 @@
-list_rs =[]
+list_result_key = []
 
+list_result_letters = []
 
 
 width_line = 10
@@ -34,78 +35,75 @@ def third_type_line():
 
 def func_v():
 
-     letter = ''
+     letter_v = ''
 
      for _ in range(6):
-          letter += second_type_line() + '\n'
+          letter_v += second_type_line() + '\n'
 
-     letter += first_type_line()
-     return letter
+     letter_v += first_type_line()
+     return letter_v
 
 def func_l():
 
-     letter = ''
+     letter_l = ''
 
      for _ in range(6):
-          letter += third_type_line() + '\n'
+          letter_l += third_type_line() + '\n'
 
-     letter += first_type_line()
+     letter_l += first_type_line()
 
-     return letter
+     return letter_l
 
 def func_a():
 
-     letter = first_type_line() + '\n'
+     letter_a = first_type_line() + '\n'
 
      for _ in range(2):
-          letter += second_type_line() + '\n'
+          letter_a += second_type_line() + '\n'
 
-     letter += first_type_line() + '\n'
+     letter_a += first_type_line() + '\n'
 
      for _ in range(3):
-          letter += second_type_line() + '\n'
+          letter_a += second_type_line() + '\n'
 
-     return letter
+     return letter_a
 
 def func_d():
 
-     letter = first_type_line() + '\n'
+     letter_d = first_type_line() + '\n'
 
      for _ in range(5):
-          letter += second_type_line() + '\n'
+          letter_d += second_type_line() + '\n'
 
-     letter += first_type_line()
+     letter_d += first_type_line()
 
-     return letter
+     return letter_d
 
-dict_letters = {
-     'v': func_v(),
-     'l': func_l(),
-     'a': func_a(),
-     'd': func_d()
-     }
+dict_letters = {'v': func_v(), 'l': func_l(), 'a': func_a(), 'd': func_d()}
 
-for letter in letters:
-     dict_letters[letter]
+for key in dict_letters:
+     result_key = dict_letters[key]
+     list_result_key.append(result_key)
 
-r1 = dict_letters['v']
-r2 = dict_letters['l']
-r3 = dict_letters['a']
-r4 = dict_letters['d']
+get_index_v = list_result_key[0]
+get_index_l = list_result_key[1]
+get_index_a = list_result_key[2]
+get_index_d = list_result_key[3]
 
-r_1 = r1.split('\n')
-r_2 = r2.split('\n')
-r_3 = r3.split('\n')
-r_4 = r4.split('\n')
+split_letter_0 = get_index_v.split('\n')
+split_letter_1 = get_index_l.split('\n')
+split_letter_2 = get_index_a.split('\n')
+split_letter_3 = get_index_d.split('\n')
 
-for rr_1, rr_2, rr_3, rr_4 in zip(r_1, r_2, r_3, r_4):
-     rs = rr_1 + '   ' + rr_2 + '   ' + rr_3 + '   ' + rr_4
-     list_rs.append(rs)
+for letter_0, letter_1, letter_2, letter_3 in zip(split_letter_0, split_letter_1, split_letter_2, split_letter_3):
+     result_letters = letter_0 + '   ' + letter_1 + '   ' + letter_2 + '   ' + letter_3
+     list_result_letters.append(result_letters)
 
-for r in list_rs:
-     print(r)
 
-with open('convert.txt', 'w') as convert:
-     for r in list_rs:
-          convert.write(r + '\n')
-          convert.close
+for letters_in_one_line in list_result_letters:
+     print(letters_in_one_line)
+
+with open('Word_of_symbols.txt', 'w') as file:
+     for letters_in_one_line in list_result_letters:
+          file.write(letters_in_one_line + '\n')
+          file.close

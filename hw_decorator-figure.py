@@ -83,7 +83,7 @@ creating_picture()
 for line_symbol in list_lines_symbol:
      print(line_symbol, '\n')
 
-with open('decorator_figure.txt', 'w') as convert:
+with open('Decorator_figure.txt', 'w') as file:
      for line_symbol in list_lines_symbol:
-          convert.write(line_symbol + ('\n'))
-          convert.close
+          file.write(line_symbol + '\n')
+          file.close
